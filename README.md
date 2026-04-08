@@ -2,8 +2,8 @@
 
 This repo contains reusable OpenClaw skills:
 
-- `calendar-guardian`
-- `intel-scout`
+- `advanced-calendar` (from openclaw/skills archive)
+- `news-aggregator-skill` (from openclaw/skills archive)
 - `finance-analyst`
 - `notebooklm-deck`
 

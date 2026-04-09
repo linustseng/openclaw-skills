@@ -56,6 +56,40 @@
 | 做投資 idea / thesis / peer analysis | `idea-generation`、`thesis-tracker`、`competitive-analysis` |
 | 做 PE / M&A 初篩與會議準備 | `deal-screening`、`deal-sourcing`、`dd-meeting-prep` |
 
+## 最常見 user prompt → 建議 skill
+
+這一段是寫給 agent 看懂「使用者通常會怎麼說」的快速對照。
+
+| 常見使用者說法 | 建議 skill |
+|---|---|
+| 幫我找今天的 Google Calendar 行程 | `gog` |
+| 幫我查最近 7 天某個人的 Gmail | `gog` |
+| 幫我把這份 Google Doc 匯出成文字 | `gog` |
+| 台北今天會下雨嗎？ | `weather` |
+| 明天新竹幾度？ | `weather` |
+| 幫我看一下 tmux 裡那個 session 卡在哪 | `tmux` |
+| 去 tmux 幫我送個 Enter / y | `tmux` |
+| 幫我把這段錄音轉成逐字稿 | `openai-whisper` |
+| 幫我把這份會議錄音整理成字幕 | `openai-whisper` |
+| 幫我把這些筆記改寫成 NotebookLM 簡報 prompt | `awesome-notebooklm-prompts` |
+| 我想做一份高質感的 NotebookLM deck | `awesome-notebooklm-prompts` |
+| 手機 app 為什麼連不上 OpenClaw？ | `node-connect` |
+| 掃 QR 配對失敗，幫我看一下 | `node-connect` |
+| 幫我做一輪 OpenClaw 主機安全檢查 | `healthcheck` |
+| 幫我看這台機器現在安不安全 | `healthcheck` |
+| 幫我做一份今天 AI agent 快報 | `news-aggregator-skill` |
+| 幫我掃一下今天科技新聞重點 | `news-aggregator-skill` |
+| 幫我把這個 landing page 做得更有設計感 | `frontend-design` |
+| 幫我做一個高質感 React 首頁 | `frontend-design` |
+| 幫我整理這個 skill，讓它更像正式 skill | `skill-creator` |
+| 幫我建立一個新的 OpenClaw skill | `skill-creator` |
+| 幫我想幾個值得研究的股票 idea | `idea-generation` |
+| 幫我更新這檔股票的 thesis | `thesis-tracker` |
+| 幫我分析這家公司跟競品差在哪 | `competitive-analysis` |
+| 幫我快速篩這個 CIM 值不值得看 | `deal-screening` |
+| 幫我列這個產業可收購名單 | `deal-sourcing` |
+| 幫我準備 management meeting 要問的問題 | `dd-meeting-prep` |
+
 ## 使用前提
 
 在用這個 repo 之前，預設你已經有：

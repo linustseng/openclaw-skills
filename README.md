@@ -37,6 +37,25 @@
 - `healthcheck`，OpenClaw 主機健檢
 - `node-connect`，node / companion app 連線排障
 
+## 給 agent 的快速選用地圖
+
+如果你是另一個剛裝好這包 skills 的 OpenClaw agent，可以先用下面這個對照快速判斷該用哪個 skill：
+
+| 使用情境 | 優先 skill |
+|---|---|
+| 查 Gmail / Calendar / Drive / Docs / Sheets | `gog` |
+| 查今天天氣 / 明天會不會下雨 | `weather` |
+| 操作互動式 CLI / 看 tmux pane / 控制長流程 | `tmux` |
+| 音檔轉逐字稿 / 本地語音轉文字 | `openai-whisper` |
+| 想做 NotebookLM 簡報 prompt / 調整 deck 風格 | `awesome-notebooklm-prompts` |
+| 排查手機 / node / companion app 連不上 | `node-connect` |
+| 做 OpenClaw 主機安全健檢 | `healthcheck` |
+| 做新聞快報 / 多來源新聞掃描 | `news-aggregator-skill` |
+| 做前端頁面美化 / landing page 設計 | `frontend-design` |
+| 建立 / 改寫 / 整理另一個 skill | `skill-creator` |
+| 做投資 idea / thesis / peer analysis | `idea-generation`、`thesis-tracker`、`competitive-analysis` |
+| 做 PE / M&A 初篩與會議準備 | `deal-screening`、`deal-sourcing`、`dd-meeting-prep` |
+
 ## 使用前提
 
 在用這個 repo 之前，預設你已經有：
@@ -125,6 +144,20 @@ find ~/.openclaw/skills -maxdepth 2 -name SKILL.md | sort
 | `whisper` | 本地語音轉文字 | `https://github.com/openai/whisper` |
 | `notebooklm-py` | NotebookLM 工作流 | `https://github.com/teng-lin/notebooklm-py` |
 | `curl` | weather skill 依賴 | 系統內建 / 套件管理器 |
+
+### 建議先驗證的依賴
+
+如果你是新 agent，裝完 skills 後，建議先跑這些檢查：
+
+```bash
+which gog || true
+which tmux || true
+which whisper || true
+which notebooklm || true
+curl --version || true
+```
+
+如果其中某個找不到，不是 skill 壞掉，而是對應的外部工具還沒裝。
 
 ### 詳細安裝說明
 

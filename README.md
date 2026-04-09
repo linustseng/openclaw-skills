@@ -1,11 +1,41 @@
 # OpenClaw Skills Pack
 
-這個 repo 收集了可重用的 OpenClaw skills，目標是讓另一個全新的 OpenClaw agent 也能快速裝上常用能力。
+可重用的 OpenClaw skills 集合，讓另一個全新的 OpenClaw agent 也能快速裝上常用能力。
 
-## 這個 repo 會做什麼
+這個 repo 適合拿來做三件事：
 
-- 把 `skills/` 底下的 skill 資料夾安裝到你的 OpenClaw skills 目錄
-- 保留每個 skill 自帶的 `SKILL.md`、scripts、references、assets、metadata
+- 搬一套常用 skills 到新的 OpenClaw 環境
+- 當作教學示範用的 skills pack
+- 整理自己常用的工具型 / workflow 型 skill
+
+## 特色
+
+- 一次安裝整包常用 skills
+- 同時包含工具型 skill 與 workflow 型 skill
+- 保留 upstream skill 的原始結構，方便後續維護
+- 適合新 agent 快速上手，也適合教學 demo
+
+## 你會拿到什麼
+
+安裝後會把 `skills/` 底下的 skill 資料夾複製到你的 OpenClaw skills 目錄，保留每個 skill 自帶的：
+
+- `SKILL.md`
+- scripts
+- references
+- assets
+- metadata
+
+## 推薦先用的 skills
+
+如果你是第一次裝，建議先從這幾個開始：
+
+- `gog`，Google Workspace 自動化
+- `weather`，快速查天氣
+- `tmux`，互動式 CLI / 長流程控制
+- `openai-whisper`，本地語音轉文字
+- `awesome-notebooklm-prompts`，NotebookLM deck prompt 強化
+- `healthcheck`，OpenClaw 主機健檢
+- `node-connect`，node / companion app 連線排障
 
 ## 使用前提
 
@@ -31,7 +61,9 @@
 
 ---
 
-## 1. 安裝 skills
+## 快速開始
+
+### 1. 安裝 skills
 
 在目標主機上執行：
 
@@ -56,7 +88,7 @@ chmod +x install.sh
 
 ---
 
-## 2. 安裝完成後怎麼驗證
+### 2. 安裝完成後怎麼驗證
 
 先確認 skill 檔案真的有被裝進去：
 
@@ -80,9 +112,21 @@ find ~/.openclaw/skills -maxdepth 2 -name SKILL.md | sort
 
 ---
 
-## 3. 建議一起安裝的外部工具 / 工作流
+## 外部工具 / 工作流依賴
 
 下面這些不是這個 repo 自動裝的，但很多 skill 會用到。建議先補齊。
+
+### 一眼看懂
+
+| 工具 / 工作流 | 用途 | 安裝來源 |
+|---|---|---|
+| `gog` | Google Workspace CLI | `https://gogcli.sh` |
+| `tmux` | 互動式終端控制 | `https://github.com/tmux/tmux` |
+| `whisper` | 本地語音轉文字 | `https://github.com/openai/whisper` |
+| `notebooklm-py` | NotebookLM 工作流 | `https://github.com/teng-lin/notebooklm-py` |
+| `curl` | weather skill 依賴 | 系統內建 / 套件管理器 |
+
+### 詳細安裝說明
 
 ### 3.1 gog
 Google Workspace CLI，供 Gmail / Calendar / Drive / Docs / Sheets / Contacts 使用。
@@ -204,7 +248,9 @@ notebooklm status
 
 ---
 
-## 4. Skills 清單（中文一句話）
+## Skills 清單
+
+### 一句話用途
 
 | skill | 一句話用途（中文） | 額外依賴 / 注意事項 |
 |---|---|---|
@@ -232,7 +278,7 @@ notebooklm status
 
 ---
 
-## 5. 給另一個全新 OpenClaw agent 的最短路徑
+## 給另一個全新 OpenClaw agent 的最短路徑
 
 如果你是新 agent，照這個順序最不容易卡住：
 
@@ -251,7 +297,7 @@ notebooklm status
 
 ---
 
-## 6. 安全提醒
+## 安全提醒
 
 - 這個 repo 不放任何 secrets。
 - 請把 token、agent 設定、storage state、個人記憶留在你自己的環境。
